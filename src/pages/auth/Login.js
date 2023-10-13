@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+import React, { useState } from "react";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
+import { useNavigate } from "react-router-dom";
+
+const Login = ({ onLogin }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     // Implement your login logic here
+    onLogin();
+    navigate("/dashboard");
   };
 
   return (
@@ -28,6 +33,6 @@ const Login = () => {
       <Button text="Login" onClick={handleLogin} />
     </div>
   );
-};
+}
 
 export default Login;
