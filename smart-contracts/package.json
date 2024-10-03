@@ -20,7 +20,7 @@
     "dotenv": "^16.3.1",
     "ethers": "6.8.1",
     "hardhat": "2.19.1",
-    "hardhat-ethernal": "^3.2.5",
+    "hardhat-ethernal": "^3.3.0",
     "hardhat-gas-reporter": "^1.0.8",
     "patch-package": "^8.0.0",
     "solidity-coverage": "^0.8.0",

@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { useWallet } from "@/hooks/useWallet";
 import InfoSection from "./info-section";
 import LichessSection from "./lichess-section";
+import TestUtils from "./util-section";
 
 export default function Home() {
     const { walletConnectionStatus } = useWallet();
@@ -18,6 +19,9 @@ export default function Home() {
                     ? <LichessSection />
                     : <InfoSection />
                 }
+            </section>
+            <section>
+                <TestUtils />
             </section>
         </div>
     )

@@ -1,0 +1,38 @@
+/* Styles for the TestUtils Component */
+.testUtils {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.testUtils h1 {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.testUtils p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Styling the buttons */
+.testUtils button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.testUtils button:hover {
+  background-color: #0056b3;
+}
+
+.testUtils button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

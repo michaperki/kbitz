@@ -2,6 +2,7 @@
 import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import { initiateLichessLogin } from "@/utils/lichess-auth";
+import styles from "./styles.module.css";
 
 export default function LichessSection() {
   const [lichessData, setLichessData] = useState<any>(null);
@@ -81,9 +82,11 @@ export default function LichessSection() {
   }
 
   return (
-    <div>
-      <h2>Welcome, {lichessData.username}</h2>
-      <p>Rating: {lichessData.perfs.classical.rating}</p>
+    <div className={styles.lichessSection}>
+        <div className={styles.lichessInnerSection}>
+            <h1>{lichessData.username}</h1>
+            <p>Rating: {lichessData.perfs.rapid.rating}</p>
+        </div>
     </div>
   );
 }
