@@ -36,5 +36,5 @@ contract Wall {
         return messages;
     }
 
-    
+
 }

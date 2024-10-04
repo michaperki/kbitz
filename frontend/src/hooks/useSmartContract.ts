@@ -4,7 +4,7 @@ import { IDeployedNetworkConstantJson, ISmartContractsConstantJson } from "@/typ
 import { useEffect, useState } from "react";
 
 /**
- * 
+ *
  * @returns @description Contains data and methods to interact with smart contract
  */
 export const useSmartContract = () => {
@@ -15,11 +15,17 @@ export const useSmartContract = () => {
     // Setup contracts data
     useEffect(() => {
         (async () => {
-            const contractsDataNew = await import(`@/constants/smart-contracts-${process.env.NODE_ENV === "production" ? "production" : "development"}.json`);
-            setContractsData(contractsDataNew);
+            try {
+                const contractsDataNew = await import(`@/constants/smart-contracts-${process.env.NODE_ENV === "production" ? "production" : "development"}.json`);
+                console.log("Loaded contracts data", contractsDataNew);
+                setContractsData(contractsDataNew);
 
-            const deployedNetworkDataNew = await import(`@/constants/deployed-network-${process.env.NODE_ENV === "production" ? "production" : "development"}.json`);
-            setDeployedNetworkData(deployedNetworkDataNew);
+                const deployedNetworkDataNew = await import(`@/constants/deployed-network-${process.env.NODE_ENV === "production" ? "production" : "development"}.json`);
+                console.log("Loaded deployed network data", deployedNetworkDataNew);
+                setDeployedNetworkData(deployedNetworkDataNew);
+            } catch (e) {
+                console.error("Failed to load contracts data", e);
+            }
         })();
     }, []);
 

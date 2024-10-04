@@ -1,4 +1,4 @@
-.wallSection {
+.wagerSection {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
     flex-direction: column;
 }
 
-.wallSectionInner {
+.wagerSectionInner {
     display: flex;
     padding: 32px;
     flex-direction: column;
@@ -19,7 +19,7 @@
     width: 100%;
 }
 
-.wallSectionInner .heading {
+.wagerSectionInner .heading {
     color: #B490FF;
     font-size: 25px;
     font-style: normal;
@@ -28,7 +28,7 @@
     width: 100%;
 }
 
-.wallSectionInner .divider {
+.wagerSectionInner .divider {
     width: 100%;
     height: 1px;
     border: none;
@@ -37,7 +37,7 @@
     margin: 12px 0;
 }
 
-.wallSectionInner .list {
+.wagerSectionInner .list {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -46,20 +46,20 @@
     overflow-y: auto;
 }
 
-.wallSectionInner .listItem {
+.wagerSectionInner .listItem {
     display: flex;
     flex-direction: column;
 }
 
-.wallSectionInner .listItem .heading {
-    color: #ffffff;
+.wagerSectionInner .listItem .heading {
+    color: #0C0C0C;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
 }
 
-.wallSectionInner .listItem .text {
+.wagerSectionInner .listItem .text {
     margin-top: 4px;
     color: rgba(255, 255, 255, 0.76);
     font-size: 16px;
